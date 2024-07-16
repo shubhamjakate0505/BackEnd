@@ -1,0 +1,10 @@
+
+#Node.js: Run time Envirment 
+Which is help to run JavaScript outside the Browser.
+
+#Process :- This object Provide Information about , and Control Over, the Current Node.js Process.
+#process-argv: return the aray containg the cmd-line argument passed    when the node.js process was lunched
+
+#module.export
+require() :a built in function to include external modules that is exit in separate file
+module.exports - A special Object   
