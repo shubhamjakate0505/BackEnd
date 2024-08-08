@@ -59,3 +59,5 @@ app.use((req,res)=>{
 # Templating :
 EJS(Emmbedded javascript temp)
 ejs is simple templating lang. that lets you generate HTMl markup with plain javascript
+
+res.render()
