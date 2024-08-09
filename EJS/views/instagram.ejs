@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Ejs</title>
+</head>
+<body>
+    <h1>This is page Gelong to@<%- id %></h1>
+    <button>Fallows</button>&nbsp;&nbsp;
+    <button>Fallowers</button>
+    <h1>List of Follwers You fallows</h1>
+    <ul>
+        
+            <% for(let follow of fallowes) {%>
+                <li>
+                    <p><%= follow %></p>
+                </li>   
+            <% } %>
+        
+    </ul>
+</body>
+</html>
