@@ -10,7 +10,7 @@ app.get('*',(req,res)=>{
 })
 
 app.use((req,res)=> {
-    console.log("Received Response");
+    console.log("Received Response ok");
     res.send("Here is your Response");
 
 })
