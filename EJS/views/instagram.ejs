@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Ejs</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>This is page Gelong to@<%- id %></h1>
-    <button>Fallows</button>&nbsp;&nbsp;
-    <button>Fallowers</button>
-    <h1>List of Follwers You fallows</h1>
-    <ul>
+    <h1>This is page Gelong to <%= data.name %></h1>
+    <button>Fallows</button> <button>Fallowers</button>
+        <p>Folloers:<%= data.followers %>&nbsp;&nbsp;&nbsp; Following:<%= data.following %> </p>
+        <hr>
+        <div style="display: flex;">
+            <%for(let userr of data.posts){%>
+                <img src="<%= userr.image %>" alt="" width="400px" height="400px">
+                <p>Like: -<%= userr.likes %></p>
+                <p>Commits: <%= userr.comments %></p>
+            <%  }%>
+        </div>
         
-            <% for(let follow of fallowes) {%>
-                <li>
-                    <p><%= follow %></p>
-                </li>   
-            <% } %>
-        
-    </ul>
+    <!-- <h1>List of Follwers You fallows</h1> -->
+   
 </body>
 </html>
+  
+  

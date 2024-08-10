@@ -3,6 +3,8 @@ const path=require("path")
 const app=express();
 const port=8080;
 
+
+app.use(express.static(path.join(__dirname,"public")));
 app.get("/serch",(req,res)=>{
     res.send("Search Page")
     // console.log("");
@@ -19,10 +21,13 @@ app.get("/roll",(req,res)=>{
 })
 
 app.get("/ig/:username",(req,res)=>{
-    let fallowes=['Ashwini','sakshi','kadambari','Ashmi']
     let {username}=req.params;
-    res.render("instagram",{id:username,fallowes})
-    console.log(username);
+    const instadata=require("./data.json")
+    const data=instadata[username]
+    console.log(data);
+    // console.log(data)
+    res.render("instagram",{data})
+    // console.log(username);
 })
 
 app.use((req,res)=>{
