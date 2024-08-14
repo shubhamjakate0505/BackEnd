@@ -24,3 +24,29 @@
 
 - link -https://www.mongodb.com/docs/manual/reference/operator/aggregation/
 - db.student({age:{$gt:22}});
+
+# mongoose package
+- mongoosejs.com
+- npm i mongoose
+# Stpes to Establish Connections
+
+1. 
+
+  const mongoose = require('mongoose');
+
+   main().then(()=>{
+     console.log("connection Sucessfully");
+   })
+  .catch(err => console.log(err));
+
+  async function main() {
+   await mongoose.connect('mongodb://127.0.0.1:27017/test');
+ }
+
+ 2. Define Schema
+
+    let userSchema=new mongoose.Schema({
+    name:String,
+    email:String,
+    age:Number
+    });
